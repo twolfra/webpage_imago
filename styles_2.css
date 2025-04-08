@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+  text-align: center;
+  background-color: #121212;
+  color: #ffffff; /* White text for contrast */
+  font-family: 'Bebas Neue', sans-serif;
+  margin: 0;
+  
+  /* Navigation Bar Styling */
+nav {
+    background-color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #1e1e1e;
+    color: #ff0000;
+}
+
+/* Active Link Styling (optional, if you want to highlight the current page) */
+.w3-bar-item.active {
+    color: #ff0000;
+}
+}
+
+.text-with-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Optional: Center-align the text */
+    margin: 20px; /* Add some space around the container */
+}
+
+.image-left,
+.image-right {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between the images and text */
+}
+
+.w3-opacity {
+    font-size: 25px; /* Adjust text size */
+    margin: 0; /* Remove default margin */
+}
+
+
+
