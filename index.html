@@ -1,76 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Imago</title>
-    <script async src="script_2.js"></script>
-    <link rel="stylesheet" href="styles_2.css" />
-  </head>
-  
-  <body>
-  
-  	<!-- Navigation -->
-	<nav class="w3-bar w3-black" style="font-size: 30px;">
-	  <a href="index.html" class="w3-button w3-bar-item">Home</a>
-	  <a href="band.html" class="w3-button w3-bar-item">Band</a>
-	  <a href="#tour" class="w3-button w3-bar-item">Tour</a>
-	  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-	</nav> 
-	
-	<div>
-  		<h2 class="w3-wide" style="font-size: 60px;">IMAGO</h2>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Band Name</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </style>
 
-	</div> 
-	
-	<div class="text-with-images">
-	    <img src="schmetterlink.gif" alt="Left Image" class="image-left">
-	    <p class="w3-opacity"><i>
-		Die 5 Großstadtschmetterlinge aus Leipzig präsentieren hier online ihren Flavor.<br>
-		Hier könnt ihr über upcoming tourdates auf dem Laufenden bleiben oder sonstige freshe news getten.<br>
-		Kontaktiert uns, wenn wir auch an eurem Milchbock spielen sollen. Wir freuen uns über Gigs, Fanpost und Merchanfragen.<br>
-		Brand New News, wir haben jetzt endlch Merch!
-	    </i></p>
-	    <img src="schmetterlink.gif" alt="Right Image" class="image-right">
-	</div>
-	
-		
-	
-	<!-- BUTTON -->
-	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-    	<button type="button">Click Me!</button>
-	</a>
+    <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="bg-black text-white font-sans">
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('hamburg_01.jpeg');">
+    <div class="absolute top-0 left-0 right-0 flex justify-between items-center p-6">
+      <h1 class="text-3xl font-bold font-bebas">Imago</h1>
+      <div class="space-x-4">
+        <a href="https://open.spotify.com/artist/3zRiG8NeE46NEF13NJY133" target="_blank" aria-label="Spotify">
+          <i class="fab fa-spotify text-2xl hover:text-green-500"></i>
+        </a>
+        <a href="https://www.instagram.com/imago_band/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram text-2xl hover:text-pink-400"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
-	
-	 <!-- Slide Show -->
-	<div class="image-section">
-	  <img class="mySlides" src="emil.jpg" style="width:100%">
-	  <img class="mySlides" src="zimone.jpg" style="width:100%">
-	  <img class="mySlides" src="moritz.jpg" style="width:100%">
-	</div> 
-	<p>
-	
-
-	
-	 <!-- Footer -->
-	<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
-	  <a href="#"><i class="fa fa-facebook-official"></i></a>
-	  <a href="#"><i class="fa fa-pinterest-p"></i></a>
-	  <a href="#"><i class="fa fa-twitter"></i></a>
-	  <a href="#"><i class="fa fa-flickr"></i></a>
-	  <a href="#"><i class="fa fa-linkedin"></i></a>
-	  <p class="w3-medium">
-	    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-	  </p>
-	</footer> 
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
-  
-   
-    <h4 id='date'></h4>
-    
-    
-     
-    
-  </body>
+  <!-- Tour Dates Section -->
+  <section class="py-16 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-8 text-center">Tour Dates</h2>
+    <ul class="space-y-4">
+      <li class="border-b border-gray-600 pb-4">Jul 05, 2025 - Berlin, DE @ Cafe Köpenik</li>
+      <li class="border-b border-gray-600 pb-4">Aug 02, 2025 - Frankfurt Oder, DE @ AZOG Festival</li>
+      <li class="border-b border-gray-600 pb-4">Aug 22, 2025 - Prenzlau, DE @ Lauenhof Festival</li>
+    </ul>
+  </section>
+</body>
 </html>
-
