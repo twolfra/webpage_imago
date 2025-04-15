@@ -5,9 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imago</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Custom Font Style -->
+  <style>
+    .font-bebas {
+      font-family: 'Bebas Neue', sans-serif;
+    }
   </style>
+
 
     <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -36,13 +47,13 @@
     </div>
   </section>
 
-  <!-- Gallery Section with Local Images -->
+  <!-- Gallery Section with Local Images and Lightbox -->
   <section class="py-16 px-6 max-w-5xl mx-auto">
     <h2 class="text-3xl font-semibold mb-8 text-center">Gallery</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <img src="emil.jpg" alt="Gallery Image 1" class="w-full h-auto rounded-lg shadow-md">
-      <img src="moritz.jpg" alt="Gallery Image 2" class="w-full h-auto rounded-lg shadow-md">
-      <img src="zimone.jpg" alt="Gallery Image 3" class="w-full h-auto rounded-lg shadow-md">
+      <a href="emil.jpg" data-lightbox="band-gallery" data-title="Emil"><img src="emil.jpg" alt="Gallery Image 1" class="w-full h-auto rounded-lg shadow-md"></a>
+      <a href="moritz.jpg" data-lightbox="band-gallery" data-title="Moritz"><img src="moritz.jpg" alt="Gallery Image 2" class="w-full h-auto rounded-lg shadow-md"></a>
+      <a href="zimone.jpg" data-lightbox="band-gallery" data-title="Zimone"><img src="zimone.jpg" alt="Gallery Image 3" class="w-full h-auto rounded-lg shadow-md"></a>
     </div>
   </section>
 
@@ -56,6 +67,41 @@
       <li class="border-b border-gray-600 pb-4">Aug 22, 2025 - Prenzlau, DE @ Lauenhof Festival</li>
     </ul>
   </section>
-  <script async defer src="https://www.instagram.com/embed.js"></script>
+
+  <!-- Contact Section with Form -->
+  <section class="py-16 px-6 max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold mb-6">Contact</h2>
+    <p class="mb-6">For booking, press, or anything else — send us a message:</p>
+    <form action="https://forms.un-static.com/forms/061d18a17637f76dae555d2a7066457366959adf" method="POST" class="space-y-4" onsubmit="showConfirmation(event)">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded text-black" />
+      <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded text-black" />
+      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full px-4 py-2 rounded text-black"></textarea>
+      <button type="submit" class="bg-white text-black px-6 py-2 rounded hover:bg-gray-200 transition">Send</button>
+    </form>
+  <div id="form-success" class="hidden text-green-400 mt-4 text-center">Thanks for your message! We'll get back to you soon.</div>
+  </section>
+
+
+ <!-- Scripts -->
+ <script async defer src="https://www.instagram.com/embed.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+ function showConfirmation(event) {
+   event.preventDefault();
+   const form = event.target;
+   const data = new FormData(form);
+   fetch(form.action, {
+     method: 'POST',
+     body: data
+   })
+   .then(() => {
+     document.getElementById('form-success').classList.remove('hidden');
+     form.reset();
+   })
+   .catch(() => {
+     alert('Something went wrong. Please try again later.');
+   });
+ }
+</script>
 </body>
 </html>
